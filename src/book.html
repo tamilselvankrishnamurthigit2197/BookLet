@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Let </title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>BookLet Page</h1>
+    </div>
+
+    <!-- container Part -->
+     <div class="container">
+        <div class="book-container">
+            <h2>Leo</h2>
+            <h5>Lokesh Kanagaraj</h5>
+            <p>Movie was a official remake of history of Violence by david cronerberg...</p>
+            <button onclick="deleteBook(event)">Delete Book</button>
+        </div>
+     </div>
+
+     <!-- popup overlay -->
+      <div class="popup-overlay"></div>
+
+      <!-- popup box -->
+       <div class="popup-box">
+        <h2>Add Book</h2>
+        <form action="">
+            <input type="text" placeholder="Book Title" id="book-title-input" />
+            <input type="text" placeholder="Book Author" id="book-author-input" />
+           <input type="text" placeholder="Book Description" id="book-description-input" />
+
+           <!-- button for add and delete functions -->
+            <button id="add-book">ADD</button>
+            <button id="cancel-popup">DELETE</button>
+            <script src="App.jsx"></script>
+        </form>
+       </div>
+</body>
+</html>
