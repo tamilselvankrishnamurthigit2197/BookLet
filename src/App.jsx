@@ -1,4 +1,5 @@
-// Getting values
+function App() {
+  // Getting values
 var popupoverlay = document.querySelector(".popup-overlay");
 var popupbox = document.querySelector(".popup-box");
 var addpopupbutton = document.getElementById("add-popupbutton");
@@ -69,3 +70,6 @@ addBook.addEventListener("click", function (event) {
 function deleteBook(event) {
   event.target.parentElement.remove();
 }
+
+}
+export default App
