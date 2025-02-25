@@ -42,7 +42,7 @@ addBook.addEventListener("click", function (event) {
     return;
   }
 
-  var div = document.createElement(div)
+  var div = document.createElement("div")
   div.setAttribute("class", "book-container");
 
   // Fill the new book container with details
