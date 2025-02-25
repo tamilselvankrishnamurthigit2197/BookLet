@@ -43,6 +43,7 @@ body{
 }
 
 .add-button{
+  /* floating button */
   background-color: #fd6569;
   color: black;
   border-radius: 100%;
@@ -65,7 +66,7 @@ body{
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 1; /* it keeps behind the popup-box */
   display: none;
 }
 
@@ -77,8 +78,8 @@ body{
   position: absolute;
   top: 20%;
   left: 30%;
-  z-index: 2;
-  display: none;
+  z-index: 2; /* higher than overlay, so it's visible */
+  display: none; /* initial state */
 }
 
 .popup-box input{
@@ -100,10 +101,7 @@ body{
   border: solid black 2px;
 }
 
-.popup-box input::placeholder{
-  color: black;
-}
-
+.popup-box input::placeholder,
 .popup-box textarea::placeholder{
   color: black;
 }
@@ -119,10 +117,7 @@ body{
   margin: 5px;
 }
 
-.popup-box input:focus{
-  outline: none;
-}
-
+.popup-box input:focus,
 .popup-box textarea:focus{
   outline: none;
 }
