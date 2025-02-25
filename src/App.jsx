@@ -31,18 +31,7 @@ var bookDescriptionInput = document.getElementById("book-description-input");
 addBook.addEventListener("click", function (event) {
   event.preventDefault();
 
-  /* validate the input before adding */
-  var title = bookTitleInput.value.trim();
-  var author = bookAuthorInput.value.trim();
-  var description = bookDescriptionInput.value.trim();
-
-  if (title === "" || author === "" || description === "") {
-    alert("please fill the input fields before adding");
-    return;
-  }
-
-  // Create a new div for the book
-  var div = document.createElement("div");
+  var div = document.createElement(div)
   div.setAttribute("class", "book-container");
 
   // Fill the new book container with details
