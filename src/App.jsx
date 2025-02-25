@@ -31,14 +31,24 @@ var bookDescriptionInput = document.getElementById("book-description-input");
 addBook.addEventListener("click", function (event) {
   event.preventDefault();
 
+  /* validate input fields */
+  var title = bookTitleInput.value.trim();
+  var author = bookAuthorInput.value.trim();
+  var description = bookDescriptionInput.value.trim();
+
+  if (title === "" || author === "" || description === "") {
+    alert("please fill the input fields before adding");
+    return;
+  }
+
   var div = document.createElement(div)
   div.setAttribute("class", "book-container");
 
   // Fill the new book container with details
   div.innerHTML = `
-    <h2>${bookTitleInput.value}</h2>
-    <h5>${bookAuthorInput.value}</h5>
-    <p>${bookDescriptionInput.value}</p>
+    <h2>${title}</h2>
+    <h5>${author}</h5>
+    <p>${description}</p>
     <button onclick="deleteBook(event)">Delete</button>
   `;
 
