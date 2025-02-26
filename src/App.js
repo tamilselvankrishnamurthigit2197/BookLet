@@ -71,7 +71,7 @@ function App() {
     }
 });
   // Delete a book
-  function deleteBook(event) {
+  window.deleteBook = function (event) {
     event.target.parentElement.remove();
   }
 }
