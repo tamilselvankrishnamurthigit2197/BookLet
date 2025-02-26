@@ -18,8 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Close popup when cancel button is clicked
     cancelpopup.addEventListener("click", function (event) {
       event.preventDefault();
-      popupbox.style.display = "none";
-      popupoverlay.style.display = "none";
+      closePopup();
     });
     
     // Input fields for book details
@@ -61,11 +60,15 @@ document.addEventListener("DOMContentLoaded", function () {
       bookDescriptionInput.value = "";
     
       // Close the popup
-      popupbox.style.display = "none";
-      popupoverlay.style.display = "none";
+      closePopup();
     });
   
-})
+
+    function closePopup() {
+      popupbox.style.display = "none";
+      popupoverlay.style.display = "none";
+    }
+});
   // Delete a book
   function deleteBook(event) {
     event.target.parentElement.remove();
