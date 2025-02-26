@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
+function App() {
+  document.addEventListener("DOMContentLoaded", function () {
     // Getting values
     var popupoverlay = document.querySelector(".popup-overlay");
     var popupbox = document.querySelector(".popup-box");
@@ -73,3 +74,5 @@ document.addEventListener("DOMContentLoaded", function () {
   function deleteBook(event) {
     event.target.parentElement.remove();
   }
+}
+export default App
